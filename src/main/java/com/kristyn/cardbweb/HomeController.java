@@ -28,10 +28,17 @@ public class HomeController {
     }
 
     @PostMapping("/processcategory")
-    public String processCompany(@ModelAttribute Category category) {
+    public String processCategory(@ModelAttribute Category category) {
         categoryRepository.save(category);
         return "redirect:/addcar";
     }
+
+    @PostMapping("/updatecategory")
+    public String updateCompany(@ModelAttribute Category category) {
+        categoryRepository.save(category);
+        return "redirect:/";
+    }
+
 
     @GetMapping("/addcar")
     public String newCar(Model model) {
@@ -68,11 +75,11 @@ public class HomeController {
         return "showcar";
     }
 
-    @RequestMapping("update/{id}")
+ /*   @RequestMapping("update/{id}")
     public String updateCategory(@PathVariable("id") long id, Model model) {
         model.addAttribute("category", categoryRepository.findById(id).get());
         return "categoryform";
-    }
+    }*/
 
     @RequestMapping("updatec/{id}")
     public String updateCar(@PathVariable("id") long id, Model model) {
@@ -90,7 +97,7 @@ public class HomeController {
     @RequestMapping("deletec/{id}")
     public String deleteCar(@PathVariable("id") long id, Model model) {
         carRepository.deleteById(id);
-        return "redirect:/";
+        return "categoryform";
     }
 
     @RequestMapping("/listcars")
