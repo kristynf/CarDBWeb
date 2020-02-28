@@ -13,6 +13,7 @@ public class Car {
     private String year;
     private String msrp;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
@@ -26,6 +27,7 @@ public class Car {
         this.year = year;
         this.msrp = msrp;
         this.category = category;
+
     }
 
     public long getId() {
@@ -75,4 +77,6 @@ public class Car {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+
 }

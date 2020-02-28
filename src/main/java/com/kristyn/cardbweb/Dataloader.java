@@ -28,6 +28,7 @@ public class Dataloader implements CommandLineRunner {
         car.setYear("2010");
         car.setMsrp("$10000");
 
+
         Car car1 = new Car();
         car1.setMake("Chevy");
         car1.setModel("Impala");

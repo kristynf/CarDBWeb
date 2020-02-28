@@ -97,7 +97,7 @@ public class HomeController {
     @RequestMapping("deletec/{id}")
     public String deleteCar(@PathVariable("id") long id, Model model) {
         carRepository.deleteById(id);
-        return "categoryform";
+        return "redirect:/";
     }
 
     @RequestMapping("/listcars")
