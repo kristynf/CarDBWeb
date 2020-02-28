@@ -52,8 +52,8 @@ public class Dataloader implements CommandLineRunner {
         carRepository.save(car);
 
 
-        category = new Category();
-        category.setName("New Car");
+        Category category1 = new Category();
+        category1.setName("New Car");
 
         Car car3 = new Car();
         car3.setMake("Ford");
@@ -72,13 +72,13 @@ public class Dataloader implements CommandLineRunner {
         cars.add(car4);
 
         category.setCars(cars);
-        categoryRepository.save(category);
+        categoryRepository.save(category1);
 
         car.setCategory(category);
         car1.setCategory(category);
         car2.setCategory(category);
-        car3.setCategory(category);
-        car4.setCategory(category);
+        car3.setCategory(category1);
+        car4.setCategory(category1);
         carRepository.save(car);
         carRepository.save(car1);
         carRepository.save(car2);
