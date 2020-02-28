@@ -2,57 +2,71 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kristyn's Wonderful World of Vehicles</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="blank.css">
 </head>
 <body>
 <!-- Navbar begin -->
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Home</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">List/Update Employees</a></li>
-                <li class="active"><a href="/">List/Update Companies</a></li>
-                <!--  <li><a href="#">Projects</a></li>
-                  <li><a href="#">Contact</a></li>-->
-            </ul>
-            -->
-            <ul class="nav navbar-nav navbar-right">
-                <form th:action="@{/search}" method="post">
-                    <input type="text" name="search" placeholder="Enter search name" required>
-                    <input type="submit" value="Submit">
-                </form>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <form th:action="@{/search}" method="post">
+                <input type="text" name="search" placeholder="Enter search name" required>
+                <input type="submit" value="Submit">
+            </form>
+        </ul>
     </div>
 </nav>
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbotron-style">
     <div class="container">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
+        <h1 class="display-4">Kristyn's Wonderful World of Vehicles</h1>
+
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg"
+               href="https://www.kbb.com/?psid=19999&siomid=sb8syCRET_dc|114738491693|kelly.%20blue%20book|e|26285ajd51861|pgrid|19636699613|ptaid|aud-387341241246:kwd-133073662853|&segment=&enhancedvs=&ptaid=aud-387341241246%3Akwd-133073662853&gclid=EAIaIQobChMIusXc3tb05wIVmY7ICh22nA5HEAAYASAAEgJzbvD_BwE&pgrid=19636699613&bodystyle="
+               role="button">Price Used Cars</a>
         </p>
     </div>
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm">
-            One of three columns
+        <div class="col-sm-2">
+
         </div>
-        <div class="col-sm">
+        <div th:align="center" class="col-sm-8">
             <br><br><br><br>
             <a href="/">
                 <botton>Index</botton>
@@ -108,12 +122,10 @@
                 </div>
 
 
-
-
             </th:block>
         </div>
-        <div class="col-sm">
-            One of three columns
+        <div class="col-sm-2">
+
         </div>
     </div>
 </div>

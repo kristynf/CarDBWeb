@@ -13,7 +13,7 @@ public class Car {
     private String year;
     private String msrp;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
